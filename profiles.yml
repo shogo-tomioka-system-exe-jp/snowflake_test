@@ -1,0 +1,9 @@
+snowflake_test:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: SIS_WH
+      database: TEST
+      schema: DBT_TEST
