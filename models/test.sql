@@ -1,10 +1,12 @@
-{{ config(materialized='table') }}
+{{ config(
+    materialized='table',
+    alias='test'
+) }}
 
 with source_data as (
     select
         PREF
-    -- 直接Snowflakeのテーブルを指定（ダブルクォーテーションが必要な場合あり）
-    from IDENTIFIER('TEST.PUBLIC.WEATHER2')
+    from TEST.PUBLIC.WEATHER2
 ),
 
 final as (
